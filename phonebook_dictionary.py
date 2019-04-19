@@ -11,7 +11,9 @@ print(phonebook_dict['Elizabeth'])
 phonebook_dict['Kareem'] = '938-489-1234'
 
 # 3. Delete Alice's [phone entry.
-phonebook_dict.pop('Alice')
+print(phonebook_dict)
+del phonebook_dict['Alice']
+print(phonebook_dict)
 
 # 4. Change Bob's phone number to '968-345-2345'.
 phonebook_dict['Bob'] = '968-345-2345'
