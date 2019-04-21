@@ -10,7 +10,7 @@ print(phonebook_dict['Elizabeth'])
 # 2. Add an entry to the dictionary: Kareem's number is 938-489-1234.
 phonebook_dict['Kareem'] = '938-489-1234'
 
-# 3. Delete Alice's [phone entry.
+# 3. Delete Alice's phone entry.
 print(phonebook_dict)
 del phonebook_dict['Alice']
 print(phonebook_dict)
