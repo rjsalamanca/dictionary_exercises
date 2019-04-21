@@ -107,3 +107,5 @@ Write a program that works with this hotel data:
 - If checking out, remove the occupants from that room.
 - Do not allow anyone to check into a room that is already occupied.
 - Do not allow checking out of a room that isn't occupied.
+
+**Solution stored in: hotel_management_app.py**
