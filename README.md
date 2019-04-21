@@ -86,7 +86,7 @@ Given a histogram tally (one returned from either letter_histogram or word_summa
 ## Large exercise: hotel management app
 
 Let's imagine that you're running a hotel, and you want to keep track of guests by floor and room number:
-
+```
   hotel = {
     '1': {
       '101': ['George Jefferson', 'Wheezy Jefferson'],
@@ -98,7 +98,7 @@ Let's imagine that you're running a hotel, and you want to keep track of guests 
       '333': ['Neo', 'Trinity', Morpheus']
     }
   }
-
+```
 Write a program that works with this hotel data:
 
 - Display a menu asking whether to check in or check out.
