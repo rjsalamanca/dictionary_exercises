@@ -1,7 +1,7 @@
 check_in_out = input('Type \'in\' to check-in and \'out\' to check out: ')
 floor_num = input('Floor number: ')
 room_num = input('Room number: ')
-occupants = []
+
 hotel = {
   '1': {
     '101': ['George Jefferson', 'Wheezy Jefferson'],
@@ -14,36 +14,47 @@ hotel = {
   }
 }
 
-if check_in_out == 'in':
+def checking_in_or_out(in_or_out,f_num,r_num):
+    occupants = []
+    end_of_check_in = False
 
-    occupant_num = int(input('Number of occupants: '))
-    for i in range(occupant_num):
-        occupants.append(input('Name of occupant %d: ' % (i+1)))
+    if(in_or_out == 'in'):
+        occupant_num = int(input('Number of occupants: '))
+        for i in range(occupant_num):
+            occupants.append(input('Name of occupant %d: ' % (i+1)))        
 
-    if floor_num in hotel:
-        if room_num in hotel[floor_num]:
-            if len(hotel[floor_num][room_num]) == 0:
-                # add occupants
-                print()
-            else:
-                print('Room is already occupied')
-        # add occupants
-    # add occupants
+    while end_of_check_in == False:
+        if(in_or_out == 'out'):
+            end_of_check_in = True
 
-elif check_in_out == 'out':
-    if floor_num in hotel:
-        if room_num in hotel[floor_num]:
-            if len(hotel[floor_num][room_num]) != 0:
-                print(hotel)
-                hotel[floor_num][room_num] = []
-                print(hotel)
+        if f_num in hotel:
+            if r_num in hotel[f_num]:
+                if len(hotel[f_num][r_num]) == 0 and in_or_out == 'in':
+                    hotel[f_num][r_num] = occupants
+                    print('Checking into room %s located on floor %s with %d occupant(s) named: %s' % (floor_num,room_num,len(hotel[floor_num][room_num]),', '.join(hotel[floor_num][room_num])))
+                    end_of_check_in = True
+                    print('Check in successful.')
+                elif len(hotel[f_num][r_num]) != 0 and in_or_out == 'out':
+                    print('Checking out of room %s located on floor %s with %d occupant(s)' % (floor_num,room_num,len(hotel[floor_num][room_num])))
+                    hotel[floor_num][room_num] = []
+                    print('Checked out successful.')
+                elif in_or_out == 'in':
+                    print('Room is already occupied')
+                    end_of_check_in = True
+                elif in_or_out == 'out':
+                    print('Room isn\'t occupied.')
+            elif in_or_out == 'in':
+                hotel[f_num][r_num] = []
             else:
                 print('Room isn\'t occupied.')
+        elif in_or_out == 'in':
+            hotel[f_num] = {}
         else:
             print('Room isn\'t occupied.')
-    else:
-        print('Room isn\'t occupied.')
 
+    return 'Finished checking %s' % in_or_out
+
+print(checking_in_or_out(check_in_out,floor_num,room_num))
 
 # Display a menu asking whether to check in or check out. - DONE
 # Prompt the user for a floor number, then a room number. - DONE
