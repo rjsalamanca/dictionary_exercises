@@ -39,29 +39,36 @@ ramit = {
   ]
 }
 ```
-Write a python expression that gets the email address of Ramit.
-Write a python expression that gets the first of Ramit's interests.
-Write a python expression that gets the email address of Jasmine.
-Write a python expression that gets the second of Jan's two interests.
-Letter Summary
+
+1. Write a python expression that gets the email address of Ramit.
+2. Write a python expression that gets the first of Ramit's interests.
+3. Write a python expression that gets the email address of Jasmine.
+4. Write a python expression that gets the second of Jan's two interests.
+
+## Letter Summary
+
 Write a letter_histogram program that asks the user for input, and prints a dictionary containing the tally of how many times each letter in the alphabet was used in the word. For example:
 
-$ python letter_histogram.py
-Please enter a word: banana
-{'a': 3, 'b': 1, 'n': 2}
-Word Summary
+    $ python letter_histogram.py
+    Please enter a word: banana
+    {'a': 3, 'b': 1, 'n': 2}
+
+## Word Summary
+
 Write a word_histogram program that asks the user for a sentence as its input, and prints a dictionary containing the tally of how many times each word in the alphabet was used in the text. For example:
 
-$ python word_histogram.py
-Please enter a sentence: To be or not to be
-{'to': 2, 'be': 2, 'or': 1, 'not': 1}
-Bonus Challenge
+    $ python word_histogram.py
+    Please enter a sentence: To be or not to be
+    {'to': 2, 'be': 2, 'or': 1, 'not': 1}
+
+##Bonus Challenge
+
 Given a histogram tally (one returned from either letter_histogram or word_summary), print the top 3 words or letters.
 
-$ python word_histogram_tally.py
+    $ python word_histogram_tally.py
 
-Please enter a sentence: To be or not to be do be do be do
-The top three words are:
-be: 4
-do: 3
-to: 2
+    Please enter a sentence: To be or not to be do be do be do
+    The top three words are:
+    be: 4
+    do: 3
+    to: 2
